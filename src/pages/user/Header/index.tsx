@@ -7,22 +7,22 @@ import Arc from '@/components/Arc';
 const personal = [
     {
         num: 168,
-        title: '商品关注',
+        title: 'My Wishlist',
         link: '',
     },
     {
         num: 9,
-        title: '店铺关注',
+        title: 'Followed Stores',
         link: '',
     },
     {
         num: 0,
-        title: '喜欢的内容',
+        title: 'Vouchers',
         link: '',
     },
     {
         num: 100,
-        title: '浏览记录',
+        title: 'Recently Viewed',
         link: '',
     },
 ];
@@ -46,22 +46,22 @@ const Header: React.FC<HeaderProps> = ({ name, icon }) => {
                 />
 
                 <Card.Body>
-                    <Flex justify="between" className="font14">
+                    <Flex justify="around" className="font14">
                         {personal.map((item, index) => (
                             <Flex.Item
                                 key={index}
                                 className={classnames('flexNone', 'txtCenter')}
                             >
                                 <div>{item.num}</div>
-                                <div>{item.title}</div>
+                                <div style={{ fontSize: "10px" }}>{item.title}</div>
                             </Flex.Item>
                         ))}
                     </Flex>
                 </Card.Body>
-                <Card.Footer
+                {/* <Card.Footer
                     content="footer content"
                     extra={<div>extra footer content</div>}
-                />
+                /> */}
             </Card>
             <Arc className={styles.arc} />
         </div>

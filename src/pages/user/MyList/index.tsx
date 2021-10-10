@@ -7,24 +7,24 @@ import { Card, WingBlank } from 'antd-mobile';
 const grids = [
   {
     icon: 'card',
-    text: '待付款',
-    to: '/olist',
+    text: 'To Pay',
+    to: '/orderList',
   },
   {
     icon: 'daifahuo',
-    text: '待发货',
-    to: '/olist',
+    text: 'To Ship',
+    to: '/orderList',
   },
 
   {
     icon: 'daishouhuo',
-    text: '待收货',
-    to: '/olist',
+    text: 'To Receive',
+    to: '/orderList',
   },
   {
     icon: 'pingjia',
-    text: '待付款',
-    to: '/olist',
+    text: 'To Review',
+    to: '/orderList',
   },
 ];
 
@@ -33,8 +33,8 @@ const MyList = () => {
     <WingBlank size="lg" className={styles.main}>
       <Card full>
         <Card.Header
-          title="我的订单"
-          extra={<Link to="/olist">查看全部订单</Link>}
+          title="My Orders"
+          extra={<Link to="/orderList">View All Orders</Link>}
           className={classnames(styles.header, 'font12')}
         />
 

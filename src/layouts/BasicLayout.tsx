@@ -12,7 +12,6 @@ interface BasicLayoutProps extends ConnectProps {
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
 
     const { children, location, dispatch, user } = props;
-    console.log(props);
 
     useEffect(() => {
         //get user info
