@@ -1,7 +1,7 @@
 import BottomNav from '@/components/BottomNav';
 import { useEffect } from 'react';
 import { Location, connect, Dispatch } from "umi";
-import "./BasicLayout.scss";
+import style from "./BasicLayout.less";
 import "@/static/iconfont/iconfont.css";
 import { ConnectState } from '@/models/connect';
 
@@ -27,7 +27,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
 
     const { pathname } = location;
     return (
-        <div className="main">
+        <div className={style.main}>
             <article>{children}</article>
             <footer><BottomNav pathname={pathname} /></footer>
         </div>

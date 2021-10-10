@@ -1,9 +1,11 @@
 import { ConnectProps, ConnectState, UserModelState } from '@/models/connect';
+import { ReactElement } from '@umijs/renderer-react/node_modules/@types/react';
 import { useEffect } from 'react';
 import { connect, Redirect } from 'umi';
 
 interface SecurityLayoutProps extends ConnectProps {
     user: UserModelState;
+    children: ReactElement;
 }
 
 const SecurityLayout: React.FC<SecurityLayoutProps> = ({ user, children, location }) => {
@@ -14,7 +16,7 @@ const SecurityLayout: React.FC<SecurityLayoutProps> = ({ user, children, locatio
         return <Redirect to={{ pathname: "/login", state: { from: location.pathname } }} />
     }
 
-    return (<div>SecurityLayout</div>)
+    return children
 };
 
 export default connect(({ user }: ConnectState) => ({ user }))(SecurityLayout);
