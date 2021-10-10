@@ -6,27 +6,27 @@ export default {
   'GET /api/getUserDetail': {
     status: 1,
     id: '001',
-    name: '莎士比亚',
+    name: 'yuyi',
     icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gdm7eok2oij301s01sgli.jpg',
-    email: 'shakespeare@kkb.com',
+    email: 'dinjet@foxmail.com',
     signature: 'hello world',
-    title: '买买买',
+    title: 'get it',
     tags: [
       {
         key: '0',
-        label: '买',
+        label: 'one',
       },
       {
         key: '1',
-        label: '再买',
+        label: 'two',
       },
       {
         key: '2',
-        label: '接着买~',
+        label: 'three~',
       },
     ],
-    country: 'China',
-    address: '开课吧总部',
-    phone: '0110-20204123',
+    country: 'Singapore',
+    address: 'Singapore',
+    phone: '+65 84057495',
   },
 };

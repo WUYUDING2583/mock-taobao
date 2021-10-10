@@ -1,10 +1,10 @@
 import React from 'react';
-import './index.scss';
+import styles from './index.less';
 
 export default function Page() {
   return (
     <div>
-      <h1 className={"title"}>Page cart/index</h1>
+      <h1 className={styles.title}>Page cart/index</h1>
     </div>
   );
 }
