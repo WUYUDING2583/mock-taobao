@@ -12,7 +12,7 @@ export default {
     status: 1,
     name: 'Shakespeare',
     icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gdm7eok2oij301s01sgli.jpg',
-    userid: '001',
+    userid: null//'001',
   },
   // GET POST can omit
   'GET /api/users': [

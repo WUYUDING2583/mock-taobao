@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Location, connect, Dispatch } from "umi";
 import "./BasicLayout.scss";
 import "@/static/iconfont/iconfont.css";
+import { ConnectState } from '@/models/connect';
 
 interface BasicLayoutProps {
     location: Location;
@@ -33,4 +34,4 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     )
 };
 
-export default connect(({ user }) => ({ user }))(BasicLayout);
+export default connect(({ user }: ConnectState) => ({ user }))(BasicLayout);
