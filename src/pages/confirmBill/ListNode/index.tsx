@@ -20,7 +20,7 @@ const ListNode: React.FC<CartProductType> = ({
         <div className={styles.right}>
           <div className={classnames('twoRows')}>{title}</div>
           <div className={styles.info}>
-            <p className={classnames('red', 'font14')}>￥{price}</p>
+            <p className={classnames('red', 'font14')}>${price}</p>
             <span className="font12">x {count}</span>
           </div>
         </div>

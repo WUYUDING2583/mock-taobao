@@ -6,6 +6,7 @@ import styles from './index.less';
 import PayBar from './PayBar';
 import { connect, history } from 'umi';
 import { ConnectProps, ConnectState } from "@/models/connect";
+import { editCart } from "@/services/editCart";
 
 interface CartState {
   data: CartProductType[];
@@ -30,7 +31,10 @@ class Cart extends Component<ConnectProps, CartState>{
     } else {
       Object.assign(data[index], newState);
     }
-    this.setState({ data });
+    editCart({ id, count }).then(res => {
+      this.setState({ data });
+    });
+
   }
 
   checkedAllChange = (allChecked: boolean) => {

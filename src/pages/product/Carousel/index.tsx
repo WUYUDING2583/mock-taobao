@@ -14,7 +14,7 @@ export default ({ data }: { data: string[] }) => {
           >
             <img
               src={item}
-              alt="图片"
+              alt="img"
               onLoad={() => {
                 // fire window resize event to change height
                 window.dispatchEvent(new Event('resize'));

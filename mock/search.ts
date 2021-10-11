@@ -34,7 +34,7 @@ function getProductList({
   return getProductList;
 }
 
-// 找到所有符合条件的数据，然后取值前几项
+// find all matched data and get first some items
 function getProductListBySearch({
   pageNo = 0,
   pageSize = 10,
@@ -43,14 +43,14 @@ function getProductListBySearch({
 }: getProductListProps): { data: {}[]; total: number } {
   const getProductList = [];
 
-  let i = 0; //遍历所有的下标
-  let n = 0; //记录当前所有符合条件的数组的下标
+  let i = 0; //loop all indexs
+  let n = 0; //store the index which data match
 
   while (i < productList.length) {
     let obj = getProduct(i++);
     if (!!searchKey) {
       const refer = obj.catgory + obj.title + obj.tags.join('');
-      // 不符合查询条件
+      // not match
       if (refer.indexOf(searchKey) === -1) {
         continue;
       }
@@ -72,7 +72,7 @@ function getProductListBySearch({
   };
 }
 
-// 代码中会兼容本地 service mock 以及部署站点的静态数据
+// 
 export default {
   'POST /api/search': (req: Request, res: Response) => {
     const { pageNo, pageSize, searchKey } = req.body;

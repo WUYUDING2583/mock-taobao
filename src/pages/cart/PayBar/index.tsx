@@ -32,10 +32,10 @@ const PayBar: React.FC<PayBarProps> = ({ data, checkedAllChange, goPay }) => {
         onChange={() => checkedAllChange(!checkedAll)}
         checked={checkedAll}
       >
-        全选
+        Select All
       </CheckboxItem>
       <span>
-        合计: ￥ <span>{totalPrice.toFixed(2)}</span>
+        Subtotal: $ <span>{totalPrice.toFixed(2)}</span>
       </span>
       <Button
         type="primary"
@@ -43,7 +43,7 @@ const PayBar: React.FC<PayBarProps> = ({ data, checkedAllChange, goPay }) => {
         className={classnames(styles.btn)}
         onClick={goPay}
       >
-        去结算(<span>{allCount}</span>)
+        CHECKOUT(<span>{allCount}</span>)
       </Button>
     </Card>
   );

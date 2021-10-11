@@ -42,7 +42,7 @@ class Product extends Component<IRoute, {}>{
           <Tags tags={tags} />
         </Card>
 
-        {/* <CartAndBuy {...this.state} /> */}
+        <CartAndBuy product={{ ...this.state }} location={this.props.location} />
       </div>
     )
   }

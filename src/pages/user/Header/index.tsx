@@ -58,10 +58,6 @@ const Header: React.FC<HeaderProps> = ({ name, icon }) => {
                         ))}
                     </Flex>
                 </Card.Body>
-                {/* <Card.Footer
-                    content="footer content"
-                    extra={<div>extra footer content</div>}
-                /> */}
             </Card>
             <Arc className={styles.arc} />
         </div>

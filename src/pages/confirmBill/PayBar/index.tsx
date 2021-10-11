@@ -17,16 +17,16 @@ const PayBar: React.FC<PayBarProps> = ({ totalPrice, count }) => {
   return (
     <div className={styles.main}>
       <Card full className={styles.payBar}>
-        <span>共 {count} 件</span>
+        <span>Items Total: {count} </span>
         <span>
-          合计: ￥ <span>{totalPrice && totalPrice.toFixed(2)}</span>
+          Order Toal: $<span>{totalPrice && totalPrice.toFixed(2)}</span>
         </span>
         <Button
           type="primary"
           className={classnames(styles.btn)}
           onClick={onOpenChange}
         >
-          去支付
+          PLACE ORDER
         </Button>
       </Card>
       <PayModal showPay={showPay} onOpenChange={onOpenChange} />
