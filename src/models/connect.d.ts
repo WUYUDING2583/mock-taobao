@@ -12,7 +12,6 @@ export interface ConnectProps {
     dispatch: Dispatch;
 }
 
-export interface CartModelState { }
 
 export {
     UserModelState
