@@ -6,29 +6,31 @@ import { ProductType } from '@/@types/product';
 import { Toast } from 'antd-mobile';
 import { connect, history } from 'umi';
 import { ConnectState, ConnectProps, CartModelState } from '@/models/connect';
-import { editCart } from '@/services/editCart';
+// import { editCart } from '@/services/editCart';
 
 interface CartAndBuyProps extends ConnectProps {
-  product: ProductType;
-  cart: CartModelState;
+  // product: ProductType;
+  // cart: CartModelState;
 }
 
-const CartAndBuy: React.FC<CartAndBuyProps> = ({ product, dispatch }) => {
+const CartAndBuy: React.FC<CartAndBuyProps> = (props) => {
   const addToCart = useCallback(() => {
-    editCart({ id: product.id, increment: 1 }).then(res => {
-      Toast.success(product.title + '已加入购物车！');
-    });
-  }, [product]);
+    // editCart({ id: product.id, increment: 1 }).then(res => {
+    //   Toast.success(product.title + '已加入购物车！');
+    // });
+  }, []);
 
   const goPay = useCallback(() => {
-    dispatch({
-      type: 'cart/saveCart',
-      payload: {
-        data: [{ ...product, count: 1, checked: true, img: product.imgs[0] }],
-      },
-    });
-    history.push('/confirmBill');
-  }, [product]);
+    // dispatch({
+    //   type: 'cart/saveCart',
+    //   payload: {
+    //     data: [{ ...product, count: 1, checked: true, img: product.imgs[0] }],
+    //   },
+    // });
+    // history.push('/confirmBill');
+  }, []);
+
+
   return (
     <div className={styles.main}>
       <Link to="/cart" className={classnames(styles.cart)}>

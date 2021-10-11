@@ -7,6 +7,7 @@ import Carousel from './Carousel';
 import { Card, WhiteSpace } from 'antd-mobile';
 import Tags from '@/components/Tags';
 import classNames from 'classnames';
+import CartAndBuy from './CartAndBuy';
 
 class Product extends Component<IRoute, {}>{
   state: ProductType = {
@@ -40,6 +41,8 @@ class Product extends Component<IRoute, {}>{
           <p className={classNames("font14")}>{title}</p>
           <Tags tags={tags} />
         </Card>
+
+        {/* <CartAndBuy {...this.state} /> */}
       </div>
     )
   }
