@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Button } from 'antd-mobile';
 import classnames from 'classnames';
 import styles from './index.less';
-// import PayModal from '@/components/PayModal';
+import PayModal from '@/components/PayModal';
 
 interface PayBarProps {
   totalPrice?: number;
@@ -29,7 +29,7 @@ const PayBar: React.FC<PayBarProps> = ({ totalPrice, count }) => {
           去支付
         </Button>
       </Card>
-      {/* <PayModal showPay={showPay} onOpenChange={onOpenChange} /> */}
+      <PayModal showPay={showPay} onOpenChange={onOpenChange} />
     </div>
   );
 };
